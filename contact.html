@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Web Page Template</title>
+  <meta charset="utf-8">
+</head>
+<body>
+
+  <script type="text/javascript">
+    window.alert("Currently Undergoing Construction and Development.");
+  </script>
+  <h1>Contact Page</h1>
+  <p>Page will include form to sign up for services</p>
+  <script type="text/javascript">
+    var readyDate = new Date("Dec 20, 2018 20:00:00").getTime();
+    var readyFunction = setInterval(function(){
+      var today = new Date().getTime();
+      var timeLeft = readyDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("ready").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(readyFunction);
+        document.getElementById("ready").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
